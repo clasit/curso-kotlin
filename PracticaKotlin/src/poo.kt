@@ -43,4 +43,38 @@ fun main(args: Array<String>) {
 
     jaime.notaMedia()
     // alumnos.get(4).notaMedia()
+
+
+
+    // ===========================================================================
+    // Gestor de alumnos mediante un singleton
+    // ===========================================================================
+
+    // VERSIÓN 1
+
+    // gestorAlumnos.registrarAlumno(javier)
+    // gestorAlumnos.registrarAlumno(maria)
+    // gestorAlumnos.registrarAlumno(pedro)
+    // gestorAlumnos.registrarAlumno(jaime)
+    // gestorAlumnos.registrarAlumno(sandra)
+
+    // VERSIÓN 2: Usando el 'with'
+    with(gestorAlumnos) {
+        registrarAlumno(javier)
+        registrarAlumno(maria)
+        registrarAlumno(pedro)
+        registrarAlumno(jaime)
+        registrarAlumno(sandra)
+    }
+
+    // VERSIÓN 3: Insertamos en la propiedad
+    // También se pueden usar el operador ? (Call save) en el casting
+    gestorAlumnos.alumnos = alumnos as? ArrayList<Alumno>
+
+
+
+    // ===========================================================================
+    // Ejemplo de acceso a una parte estática dentro de la clase
+    // ===========================================================================
+    Alumno.companion.verNota()
 }

@@ -18,12 +18,23 @@ open class Persona(val nombre: String, val apellido: String, var edad: Int?) {
 
 
 // Al pasar loc parámetros indicando 'var' o 'val' se definen como atributos de la clase
+// Implícitamente una clase abstracta es 'open' (Se puede extender)
+// Una clase abstracta no se puede instanciar. Debe tener al menos un método abstracto.
 open class Alumno(nombre: String, apellido: String, edad: Int?): Persona(nombre, apellido, edad) {
 
     // El bloque de inicialización se ejecuta ANTES que el constructor
     init {
         println("Iniciada la clase Alumno")
     }
+
+
+    // Definir una parte estátia dentro de la clase
+    object companion {
+        fun verNota(): Int {
+            return 10
+        }
+    }
+
 
     // Se puede hacer sobrecarga de constructores.
     // con this(nombre, apellido) se llama al constructor primario

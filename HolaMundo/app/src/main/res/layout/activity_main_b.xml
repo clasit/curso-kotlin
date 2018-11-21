@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <Button android:id="@+id/btnMensaje"
+            android:text="Ver mensaje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:padding="20dp"
+            android:onClick="verMensaje"/>
+
+    <Button android:id="@+id/goActivity2"
+            android:text="Go to 2 º Activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goActivity2"
+            android:padding="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"/>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+        <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:layout_weight="0.7"
+                android:hint="Su nombre"/>
+        <Button
+                android:id="@+id/btnSendName"
+                android:text="Enviar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:onClick="enviarNombre"/>
+    </LinearLayout>
+</LinearLayout>
