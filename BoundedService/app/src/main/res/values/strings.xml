@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BoundedService</string>
+    <string name="btnAction">Action</string>
+</resources>

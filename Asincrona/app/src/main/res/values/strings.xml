@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Asincrona</string>
+    <string name="btnInicioServicio">Inicio</string>
+    <string name="btnFinServicio">Fin</string>
+    <string name="btnInicioIntentService">Inicio Intent Service</string>
+    <string name="btnEnviarDatos">Entivar Datos</string>
 </resources>
