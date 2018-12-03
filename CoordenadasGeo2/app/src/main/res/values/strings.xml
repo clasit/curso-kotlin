@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CoordenadasGeo</string>
+    <string name="btnPosiciones">Obtener posiciones</string>
+</resources>
