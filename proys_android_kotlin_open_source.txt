@@ -1,0 +1,8 @@
+Proyectos open-source Android
+1) https://blog.aritraroy.in/20-awesome-open-source-android-apps-to-boost-your-development-skills-b62832cf0fa4
+2*) https://github.com/Mybridge/amazing-android-apps
+
+*: este punto cuando se tenga algo de confianza
+en la programación con Android - Kotlin
+
+

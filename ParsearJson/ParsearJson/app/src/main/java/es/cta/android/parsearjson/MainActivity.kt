@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Environment
 import android.support.v4.content.LocalBroadcastManager
 import android.util.Log
 import android.widget.ArrayAdapter
@@ -19,6 +20,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +43,11 @@ class MainActivity : AppCompatActivity() {
                 super.onPostExecute(result)
                 val adapter=ImgAdapter(ctx, result)
                 lvUsers.adapter=adapter
+
+                lvUsers.setOnItemClickListener { parent, view, position, id ->
+                    val data = result?.get(position)
+                    File(Environment.getExternalStorageDirectory(), "user").writeText("Titulo: ${data?.title}")
+                }
             }
         }.execute("https://jsonplaceholder.typicode.com/photos")
 

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AndroidDB</string>
+    <string name="get_users">Get users</string>
+</resources>
